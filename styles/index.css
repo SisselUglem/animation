@@ -4,49 +4,12 @@ body{
     width: 100%;
     justify-content: center; 
 }
-h3{
-    font-family: 'Alfa Slab One';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 31px;
-    line-height: 42px;
-    letter-spacing: 0.05em;
-    color: #8D4F42;
-}
-h4{
-    font-family: 'Alfa Slab One';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 29px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #8D4F42;
-}
-h5{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: right;
-    letter-spacing: 0.04em;
-    color: #4B4B4B;
-}
-p{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.045em;
-}
 /*header*/
 header{
     background-image: url(../assets/background-1860.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 829px;
+    height: 100vh;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -55,7 +18,7 @@ header{
 .site-nav{
     max-width: 1680px;
     width: 100%;
-    height: 94px;
+    min-height: 80px;
     display: flex;
     background: rgba(141, 79, 66, 0.7);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -65,7 +28,7 @@ header{
 }
 .site-nav:hover{
     background-color: #8D4F42;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .site-nav-content{
     max-width: 1300px;
@@ -135,11 +98,11 @@ h2{
     margin-top: 0%;
 }
 /*end header*/
-/*section one*/
+/*section one nature*/
 .nature{
     display: flex;
     justify-content: center;
-    min-height: 804px;
+    min-height: 100vh;
     align-items: center;
 }
 .nature-container{
@@ -175,26 +138,24 @@ h2{
     --animate-duration: 3s;
   }
 /*end section one*/
-/*section two*/
+/*section two services*/
 .services{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 712px;
+    min-height: 100vh;
     background: #8D4F42;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.services-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-bottom: 4%;
 }
 .services-headline{
     color: white;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 0%;
+    padding: 4%;
+    margin: 0%;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     animation: textbounce 2s ease infinite;
 }
 @keyframes textbounce{
@@ -208,6 +169,7 @@ h2{
     justify-content: center;
     gap: 31px;
     margin-bottom: 40px;
+    position: relative;
 }
 .card{
     display: flex;
@@ -236,7 +198,7 @@ h2{
     color: #8D4F42;
 }
 /*end section two*/
-/*section three*/
+/*section three about*/
 .about-container{
     display: flex;
     flex-direction: row;
@@ -245,7 +207,8 @@ h2{
     width: 100%;
     margin: auto;
     align-items: center;
-    height: 804px;
+    min-height: 100vh;
+    padding-top: 2%;
 }
 .about-box{
     width: 352px;
@@ -253,13 +216,14 @@ h2{
     position: relative;
     background: #8D4F42;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 50px;
+    margin-right: 4%;
+    margin-bottom: 4%;
     animation: imgzoom 3s ease infinite;
 }
 .about-img{
     position: absolute;
-    top: 45px;
-    left: 45px;
+    top: 7%;
+    left: 7%;
     animation: imgzoom 3s ease infinite;
 }
 @keyframes imgzoom {
@@ -268,12 +232,12 @@ h2{
     100% {transform: scale(1) rotate(0deg);}
 }
 .about-article{
-    margin-left: 50px;
+    margin-left: 4%;
 }
 /*end section three*/
-/*section four*/
+/*section four missions*/
 .missions{
-    height: 1700px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,6 +252,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 2%;
 }
 .missions-headline{
     display: flex;
@@ -300,6 +265,13 @@ h2{
     color: #8D4F42;
     margin: 0%;
     margin-top: 20px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    animation: lineMoveL 3s ease infinite;
+}
+@keyframes lineMoveL {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(-60px, 0px);}
+    0% {transform: translate(0px, 0px);}
 }
 .mission-linebox{
     width: 300px;
@@ -311,11 +283,11 @@ h2{
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 40px;
-    animation: lineMove 3s ease infinite;
+    animation: lineMoveR 3s ease infinite;
 }
-@keyframes lineMove {
+@keyframes lineMoveR {
     0% {transform: translate(0px, 0px);}
-    50% {transform: translate(150px, 0px);}
+    50% {transform: translate(60px, 0px);}
     0% {transform: translate(0px, 0px);}
 }
 .missions-single-container{
@@ -351,13 +323,14 @@ h2{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /*end section four*/
-/*section five*/
+/*section five contact*/
 .contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 1100px;
+    min-height: 100vh;
+    margin-top: 2%;
 }
 .contact-container{
     display: flex;
@@ -365,7 +338,6 @@ h2{
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-top: 50px;
 }
 .contact-info-container{
     display: flex;
@@ -387,6 +359,30 @@ h2{
     line-height: 110px;
     color: #8D4F42;
     display: flex;
+}
+.fa-phone:hover{
+    animation: ring 0.15s infinite;
+}
+@keyframes ring {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(6deg);}
+    0% {transform: rotate(0deg);}
+}
+.fa-map-marker-alt:hover{
+    animation: iconZoom 1s ease infinite;
+}
+@keyframes iconZoom {
+    0% {transform: scale(1);}
+    60% {transform: scale(1.1);}
+    65% {transform: scale(1);}
+}
+.fa-envelope:hover{
+    animation: sideToSide 2s ease infinite;
+}
+@keyframes sideToSide {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(20px, 0px);}
+    0% {transform: translate(0px, 0px);}
 }
 .form-container{
     min-width: 620px;
@@ -548,4 +544,41 @@ footer{
     line-height: 110px;
     color: #ffffff;
     display: flex;
+}
+h3{
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 31px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: #8D4F42;
+}
+h4{
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #8D4F42;
+}
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #4B4B4B;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.045em;
 }
